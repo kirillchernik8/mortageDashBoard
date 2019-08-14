@@ -22,11 +22,12 @@ body {
 
 .showUsers {
 	height: 60px;
-	width: 200px;
+	width: 500px;
 	position: absolute;
-	left: 700px;
-	bottom: 450px;
+	left: 400px;
+	bottom: 700px;
 	background-color: aquamarine;
+	border-radius: 1%
 }
 
 .back {
@@ -225,7 +226,7 @@ body {
     width: 350px;
     max-width: 200%;
     position: absolute;
-    top: 481px;
+    top: 200px;
     left: 900px;
 }
 .chartForBalance {
@@ -235,6 +236,6 @@ body {
 	width: 350px;
 	max-width: 200%;
 	position: absolute;
-	top: 483px;
+	top: 200px;
 	left: 100px;
 }
