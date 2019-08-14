@@ -1,1 +1,241 @@
-body{background-color:#171e22;font-family:Raleway,sans-serif}.mainHeader{font-size:80px;color:#7fffd4;position:relative;top:200px;left:350px}.showStats{height:60px;width:200px;position:absolute;left:450px;top:-100px;background-color:#7fffd4}.showUsers{height:60px;width:200px;position:absolute;left:700px;bottom:450px;background-color:#7fffd4}.back{height:200px;width:300px;background-color:gray}.UserList{-webkit-column-count:4;-moz-column-count:4;column-count:4;width:70%;position:relative;top:400px;left:300px}@media screen and (max-width:375px){.UserList{-webkit-column-count:3;-moz-column-count:3;column-count:3;column-count:3;width:250%}.showStats{height:60px;width:500px;position:absolute;left:200px;top:-100px;background-color:#7fffd4}.showUsers{height:60px;width:500px;position:absolute;left:150px;bottom:650px;background-color:#7fffd4}.chartForBalance{color:#fff;height:100px;max-width:100%;width:350px;max-width:200%;position:absolute;top:200px;left:100px}.chartForCreditScore{color:#fff;width:350px;max-width:200%;position:absolute;top:670px;left:439px}}@media screen and (min-width:375px) and (-webkit-device-pixel-ratio:2){.UserList{-webkit-column-count:3;-moz-column-count:3;column-count:3;column-count:3;width:250%}.showStats{height:60px;width:500px;position:absolute;left:200px;top:-100px;background-color:#7fffd4}.showUsers{height:60px;width:300px;position:absolute;left:110px;bottom:550px;background-color:#7fffd4}.chartForBalance{color:#fff;height:100px;max-width:100%;width:150px;max-width:200%;position:absolute;top:163px;left:72px}.chartForCreditScore{color:#fff;width:150px;max-width:200%;position:absolute;top:335px;left:260px}}.userCard{display:inline-block;height:350px;width:200px;margin-right:20px;margin-bottom:30px;padding:25px;border:1px solid #2f4f4f;border-radius:5%;background-color:gray}.userName{width:90%;font-size:45px;color:#fff;margin-bottom:10px}.userAvatar{height:200px;width:200px;border-radius:80%;position:relative;top:25px}.mortageStatus{height:60px;width:80px;color:#fff;font-size:20px}.unlikely{height:20px;width:20px;position:relative;top:5px;left:180px;border-radius:100%;background-color:orange}.likely{height:20px;width:20px;position:relative;top:5px;left:180px;border-radius:100%;background-color:#7fffd4}.verylikely{height:20px;width:20px;position:relative;top:5px;left:180px;border-radius:100%;background-color:green}.AccountCardBack{position:relative;right:4px;font-family:Raleway,sans-serif;display:inline-block;height:350px;width:200px;border-radius:5%;background-color:gray;line-height:30px;color:#7fffd4}.backCardTitles{font-size:25px;color:#fff}.chartForCreditScore{color:#fff;width:350px;max-width:200%;position:absolute;top:481px;left:900px}.chartForBalance{color:#fff;height:100px;max-width:100%;width:350px;max-width:200%;position:absolute;top:483px;left:100px}
+body {
+	background-color: #171e22;
+	font-family: 'Raleway', sans-serif;
+}
+
+.mainHeader {
+	font-size: 80px;
+	color: aquamarine;
+	position: relative;
+	top: 200px;
+	left: 350px;
+}
+
+.showStats {
+	height: 60px;
+	width: 200px;
+	position: absolute;
+	left: 450px;
+	top: -100px;
+	background-color: aquamarine;
+}
+
+.showUsers {
+	height: 60px;
+	width: 500px;
+	position: absolute;
+	left: 400px;
+	bottom: 700px;
+	background-color: aquamarine;
+	border-radius: 1%
+}
+
+.back {
+	height: 200px;
+	width: 300px;
+	background-color: gray
+}
+
+.UserList {
+	-webkit-column-count: 4;
+	-moz-column-count: 4;
+	column-count: 4;
+	width: 70%;
+	position: relative;
+	top: 400px;
+	left: 300px;
+}
+
+@media screen and (max-width: 375px) {
+	.UserList {
+		-webkit-column-count: 3;
+		-moz-column-count: 3;
+		column-count: 3;
+		column-count: 3;
+		width: 250%;
+	}
+
+	.showStats {
+		height: 60px;
+		width: 500px;
+		position: absolute;
+		left: 200px;
+		top: -100px;
+		background-color: aquamarine;
+	}
+
+	.showUsers {
+		height: 60px;
+		width: 500px;
+		position: absolute;
+		left: 150px;
+		bottom: 650px;
+		background-color: aquamarine;
+	}
+	.chartForBalance {
+		color: white;
+		height: 100px;
+		max-width: 100%;
+		width: 350px;
+		max-width: 200%;
+		position: absolute;
+		top: 200px;
+		left: 100px;
+	}
+	.chartForCreditScore {
+		color: white;
+		width: 350px;
+		max-width: 200%;
+		position: absolute;
+		top: 670px;
+		left: 439px;
+	}
+}
+
+@media screen and (min-width: 375px) and (-webkit-device-pixel-ratio: 2) {
+	.UserList {
+		-webkit-column-count: 3;
+		-moz-column-count: 3;
+		column-count: 3;
+		column-count: 3;
+		width: 250%;
+	}
+
+	.showStats {
+		height: 60px;
+		width: 500px;
+		position: absolute;
+		left: 200px;
+		top: -100px;
+		background-color: aquamarine;
+	}
+
+	.showUsers {
+		height: 60px;
+		width: 300px;
+		position: absolute;
+		left: 110px;
+		bottom: 550px;
+		background-color: aquamarine;
+	}
+	.chartForBalance {
+		color: white;
+		height: 100px;
+		max-width: 100%;
+		width: 150px;
+		max-width: 200%;
+		position: absolute;
+		top: 163px;
+		left: 72px;
+	}
+	.chartForCreditScore {
+		color: white;
+		width: 150px;
+		max-width: 200%;
+		position: absolute;
+		top: 335px;
+		left: 260px;
+	}
+}
+
+
+.userCard {
+	display: inline-block;
+	height: 350px;
+	width: 200px;
+	margin-right: 20px;
+	margin-bottom: 30px;
+	padding: 25px;
+	border: 1px solid darkslategray;
+	border-radius: 5%;
+	background-color: gray
+}
+
+.userName {
+	width: 90%;
+	font-size: 45px;
+	color: white;
+	margin-bottom: 10px;
+}
+
+.userAvatar {
+	height: 200px;
+	width: 200px;
+	border-radius: 80%;
+	position: relative;
+	top: 25px
+}
+
+.mortageStatus {
+	height: 60px;
+	width: 80px;
+	color: white;
+	font-size: 20px;
+}
+
+.unlikely {
+	height: 20px;
+	width: 20px;
+	position: relative;
+	top: 5px;
+	left: 180px;
+	border-radius: 100%;
+	background-color: orange
+}
+
+.likely {
+	height: 20px;
+	width: 20px;
+	position: relative;
+	top: 5px;
+	left: 180px;
+	border-radius: 100%;
+	background-color: aquamarine
+}
+
+.verylikely {
+	height: 20px;
+	width: 20px;
+	position: relative;
+	top: 5px;
+	left: 180px;
+	border-radius: 100%;
+	background-color: green
+}
+
+.AccountCardBack {
+	position: relative;
+	right: 4px;
+	font-family: 'Raleway', sans-serif;
+	display: inline-block;
+	height: 350px;
+	width: 200px;
+	border-radius: 5%;
+	background-color: gray;
+	line-height: 30px;
+	color: aquamarine
+}
+
+.backCardTitles {
+	font-size: 25px;
+	color: white
+}
+
+.chartForCreditScore {
+    color: #fff;
+    width: 350px;
+    max-width: 200%;
+    position: absolute;
+    top: 200px;
+    left: 900px;
+}
+.chartForBalance {
+	color: white;
+	height: 100px;
+	max-width: 100%;
+	width: 350px;
+	max-width: 200%;
+	position: absolute;
+	top: 200px;
+	left: 100px;
+}

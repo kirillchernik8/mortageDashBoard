@@ -23,3 +23,5 @@ npm-debug.log*
 .babelrc
 
 package-lock.json
+
+*app.js*
