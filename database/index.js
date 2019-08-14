@@ -5,7 +5,8 @@ const upsertMany = require('@meanie/mongoose-upsert-many');
 
 
 // Connect to mongoose 
-mongoose.connect('mongodb://user:abc123@ds149437.mlab.com:49437/users', {
+let MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost/test'
+mongoose.connect(MONGO_URI, {
   useNewUrlParser: true
 });
 
