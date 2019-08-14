@@ -1,7 +1,4 @@
 {
-  "name": "landis",
-  "version": "0.1.0",
-  "private": true,
   "dependencies": {
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
@@ -12,32 +9,23 @@
     "babel-loader": "^8.0.6",
     "body-parser": "^1.19.0",
     "brotli-gzip-webpack-plugin": "^0.5.0",
-    "classnames": "^2.2.6",
     "compression": "^1.7.4",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "fs": "0.0.1-security",
-    "fusioncharts": "^3.14.0-sr.1",
-    "jsonlines": "^0.1.1",
-    "map-to-css-modules": "^1.0.6",
     "mongoose": "^5.6.9",
     "next": "^9.0.3",
     "path": "^0.12.7",
-    "pg": "^7.12.1",
     "react": "^16.9.0",
     "react-card-flip": "^0.8.1",
     "react-dom": "^16.9.0",
     "react-flip-move": "^3.0.3",
-    "react-flipcard": "^0.2.1",
-    "react-fusioncharts": "^3.0.1",
     "react-minimal-pie-chart": "^5.0.0",
     "react-popper": "^1.3.4",
-    "react-scripts": "3.1.0",
     "reactstrap": "^8.0.1",
-    "sqlite3": "^4.0.9",
     "webpack": "^4.39.1"
   },
   "scripts": {
-    "start": "react-scripts start"
+    "start": "webpack -p && node server/server.js"
   }
 }
