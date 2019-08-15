@@ -1,4 +1,5 @@
 import React from "react";
+import LazyLoad from 'react-lazy-load';
 import UserCardBack from "./UserCardBack.jsx";
 import ReactCardFlip from "react-card-flip";
 import { Tooltip } from "reactstrap";
@@ -65,10 +66,12 @@ class UserCard extends React.Component {
                 It is {this.state.mortageStatus} that they will get a mortage.
               </Tooltip>
             </div>
-            <span className="userName">
+            <div className="userName">
               {this.props.user.name_first} <br /> {this.props.user.name_last}
-            </span>
-            <img className="userAvatar" src={this.props.user.picture} />
+            </div>
+            <LazyLoad >
+            <img className="userAvatar" alt ={`Image of ${this.props.user.name_first} ${this.props.user.name_last}`}src={this.props.user.picture} />
+            </LazyLoad>
           </div>
           <UserCardBack
             user={this.props.user}

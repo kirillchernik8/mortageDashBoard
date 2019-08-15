@@ -18,6 +18,13 @@ app.use(parser.json())
 app.use(express.static(path.join(__dirname, '../public')))
 app.use(compression())
 
+app.get('/*.js', (req, res, next) => {
+  // req.url = req.url + '.br';
+  console.log(req.url)
+  // res.set('Content-Encoding', 'br');
+  // res.set('Content-Type', 'text/javascript');
+  next();
+ });
 
 app.get('/api/allUsers', (req, res) => {
   getUserInfo((result) => {

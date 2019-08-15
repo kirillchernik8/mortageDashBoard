@@ -11,9 +11,11 @@ class Stats extends React.Component {
       <div>
         <div className="chartForCreditScore">
           <h1> Credit scores: </h1>
-          <h5>Green-Optimal </h5>
-          <h5>Aqua-Medium </h5>
-          <h5>Orange-Low </h5>
+          <div className="labels">
+            <h5>Green-Optimal </h5>
+            <h5>Aqua-Medium </h5>
+            <h5>Orange-Low </h5>
+          </div>
           <PieChart
             animate={true}
             animationDuration={1000}
@@ -39,9 +41,11 @@ class Stats extends React.Component {
 
         <div className="chartForBalance">
           <h1> Balances: </h1>
+          <div className="labels">
           <h5>Green-Optimal </h5>
           <h5>Aqua-Medium </h5>
           <h5>Orange-Low </h5>
+          </div>
           <PieChart
             animate={true}
             animationDuration={1000}

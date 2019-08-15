@@ -3,239 +3,473 @@ body {
 	font-family: 'Raleway', sans-serif;
 }
 
-.mainHeader {
-	font-size: 80px;
-	color: aquamarine;
-	position: relative;
-	top: 200px;
-	left: 350px;
+
+@media only screen and (min-width: 961px) {
+	.mainHeader {
+		font-size: 80px;
+		color: aquamarine;
+		position: relative;
+		top: 200px;
+		left: 350px;
+	}
+
+	.showStats {
+		height: 60px;
+		width: 200px;
+		position: absolute;
+		left: 450px;
+		top: -100px;
+		background-color: aquamarine;
+	}
+
+	.showUsers {
+		height: 60px;
+		max-width: 509px;
+		width: 36%;
+		position: absolute;
+		left: 23%;
+		bottom: 440px;
+		background-color: aquamarine;
+		border-radius: 1%;
+	}
+
+	.back {
+		height: 200px;
+		width: 300px;
+		background-color: gray
+	}
+
+	.UserList {
+		-webkit-column-count: 4;
+		-moz-column-count: 4;
+		column-count: 4;
+		max-width: 1500px;
+		width: 90%;
+		position: relative;
+		top: 400px;
+		left: 300px;
+	}
+
+
+	.userCard {
+		display: inline-block;
+		max-height: 350px;
+		height: 90%;
+		width: 150px;
+		margin-right: 20px;
+		margin-bottom: 30px;
+		padding: 25px;
+		border: 1px solid darkslategray;
+		border-radius: 5%;
+		background-color: gray
+	}
+
+	.userName {
+		width: 90%;
+		font-size: 45px;
+		color: white;
+		margin-bottom: 10px;
+	}
+
+	.userAvatar {
+		max-height: 200px;
+		max-width: 200px;
+		height: 80%;
+		width: 100%;
+		border-radius: 80%;
+		position: relative;
+		top: 25px;
+		padding-bottom: 10px;
+	}
+
+	.mortageStatus {
+		height: 60px;
+		width: 80px;
+		color: white;
+		font-size: 20px;
+	}
+
+	.unlikely {
+		height: 20px;
+		width: 20px;
+		position: relative;
+		top: -11px;
+		left: 138px;
+		border-radius: 100%;
+		background-color: orange
+	}
+
+	.likely {
+		height: 20px;
+		width: 20px;
+		position: relative;
+		top: -11px;
+		left: 138px;
+		border-radius: 100%;
+		background-color: aquamarine
+	}
+
+	.verylikely {
+		height: 20px;
+		width: 20px;
+		position: relative;
+		top: -11px;
+		left: 138px;
+		border-radius: 100%;
+		background-color: green
+	}
+
+	.AccountCardBack {
+		position: relative;
+		top: -20px;
+		font-family: 'Raleway', sans-serif;
+		display: inline-block;
+		border-radius: 5%;
+		background-color: gray;
+		line-height: 30px;
+		color: aquamarine;
+	}
+
+	.backCardTitles {
+		font-size: 25px;
+		color: white
+	}
+
+	.chartForCreditScore {
+		color: white;
+		width: 350px;
+		max-width: 200%;
+		width: 270px;
+		position: relative;
+		top: 86px;
+		left: 59%;
+	}
+
+	.chartForBalance {
+		color: white;
+		height: 100px;
+		max-width: 100%;
+		width: 270px;
+		max-width: 200%;
+		position: relative;
+		top: -380px;
+		left: 10%;
+	}
 }
 
-.showStats {
-	height: 60px;
-	width: 200px;
-	position: absolute;
-	left: 450px;
-	top: -100px;
-	background-color: aquamarine;
-}
-
-.showUsers {
-	height: 60px;
-	width: 500px;
-	position: absolute;
-	left: 400px;
-	bottom: 700px;
-	background-color: aquamarine;
-	border-radius: 1%
-}
-
-.back {
-	height: 200px;
-	width: 300px;
-	background-color: gray
-}
-
-.UserList {
-	-webkit-column-count: 4;
-	-moz-column-count: 4;
-	column-count: 4;
-	width: 70%;
-	position: relative;
-	top: 400px;
-	left: 300px;
-}
 
 @media screen and (max-width: 375px) {
-	.UserList {
-		-webkit-column-count: 3;
-		-moz-column-count: 3;
-		column-count: 3;
-		column-count: 3;
-		width: 250%;
+	.mainHeader {
+		font-size: 80px;
+		color: aquamarine;
+		position: relative;
+		top: 5px;
+		left: 29%;
 	}
 
 	.showStats {
 		height: 60px;
-		width: 500px;
+		max-width: 550px;
+		width: 118%;
 		position: absolute;
-		left: 200px;
-		top: -100px;
+		left: 9%;
+		top: -400px;
 		background-color: aquamarine;
 	}
 
 	.showUsers {
-		height: 60px;
-		width: 500px;
+		height: 42px;
+		max-width: 509px;
+		width: 69%;
 		position: absolute;
-		left: 150px;
-		bottom: 650px;
+		left: 17%;
+		bottom: 440px;
 		background-color: aquamarine;
-	}
-	.chartForBalance {
-		color: white;
-		height: 100px;
-		max-width: 100%;
-		width: 350px;
-		max-width: 200%;
-		position: absolute;
-		top: 200px;
-		left: 100px;
-	}
-	.chartForCreditScore {
-		color: white;
-		width: 350px;
-		max-width: 200%;
-		position: absolute;
-		top: 670px;
-		left: 439px;
-	}
-}
-
-@media screen and (min-width: 375px) and (-webkit-device-pixel-ratio: 2) {
-	.UserList {
-		-webkit-column-count: 3;
-		-moz-column-count: 3;
-		column-count: 3;
-		column-count: 3;
-		width: 250%;
+		border-radius: 1%;
 	}
 
-	.showStats {
-		height: 60px;
-		width: 500px;
-		position: absolute;
-		left: 200px;
-		top: -100px;
-		background-color: aquamarine;
-	}
-
-	.showUsers {
-		height: 60px;
+	.back {
+		height: 200px;
 		width: 300px;
-		position: absolute;
-		left: 110px;
-		bottom: 550px;
-		background-color: aquamarine;
+		background-color: gray
 	}
-	.chartForBalance {
-		color: white;
-		height: 100px;
-		max-width: 100%;
+
+	.UserList {
+		-webkit-column-count: 3;
+		-moz-column-count: 3;
+		column-count: 3;
+		max-width: 809px;
+		width: 233%;
+		position: relative;
+		top: 400px;
+		left: 9%;
+	}
+
+
+	.userCard {
+		display: inline-block;
+		max-height: 350px;
+		height: 90%;
 		width: 150px;
-		max-width: 200%;
-		position: absolute;
-		top: 163px;
-		left: 72px;
+		margin-right: 20px;
+		margin-bottom: 30px;
+		padding: 25px;
+		border: 1px solid darkslategray;
+		border-radius: 5%;
+		background-color: gray;
+	}
+
+	.userName {
+		width: 90%;
+		font-size: 45px;
+		color: white;
+		margin-bottom: 10px;
+	}
+
+	.userAvatar {
+		max-height: 200px;
+		max-width: 200px;
+		height: 80%;
+		width: 100%;
+		border-radius: 80%;
+		position: relative;
+		top: 25px;
+		padding-bottom: 10px;
+	}
+
+	.mortageStatus {
+		height: 60px;
+		width: 80px;
+		color: white;
+		font-size: 20px;
+	}
+
+	.unlikely {
+		height: 20px;
+		width: 20px;
+		position: relative;
+		top: -11px;
+		left: 138px;
+		border-radius: 100%;
+		background-color: orange
+	}
+
+	.likely {
+		height: 20px;
+		width: 20px;
+		position: relative;
+		top: -11px;
+		left: 138px;
+		border-radius: 100%;
+		background-color: aquamarine
+	}
+
+	.verylikely {
+		height: 20px;
+		width: 20px;
+		position: relative;
+		top: -11px;
+		left: 138px;
+		border-radius: 100%;
+		background-color: green
+	}
+
+	.AccountCardBack {
+		position: relative;
+		top: -20px;
+		font-family: 'Raleway', sans-serif;
+		display: inline-block;
+		border-radius: 5%;
+		background-color: gray;
+		line-height: 30px;
+		color: aquamarine;
+	}
+
+	.backCardTitles {
+		font-size: 25px;
+		color: white
+	}
+
+	.labels{
+		line-height: 0em;
 	}
 	.chartForCreditScore {
 		color: white;
-		width: 150px;
-		max-width: 200%;
-		position: absolute;
-		top: 335px;
-		left: 260px;
+		width: 350px;
+		max-width: 270px;
+		width: 50%;
+		position: relative;
+		top: 180px;
+		left: 54%;
+	}
+
+	.chartForBalance {
+		color: white;
+		height: 95px;
+		max-width: 100%;
+		width: 270px;
+		max-width: 50%;
+		position: relative;
+		top: -257px;
+		left: 0%;
 	}
 }
 
+@media screen and (min-width: 375px) and (max-width: 960px) {
+	.mainHeader {
+		font-size: 80px;
+		color: aquamarine;
+		position: relative;
+		top: 114px;
+		left: 23%;
+	}
 
-.userCard {
-	display: inline-block;
-	height: 350px;
-	width: 200px;
-	margin-right: 20px;
-	margin-bottom: 30px;
-	padding: 25px;
-	border: 1px solid darkslategray;
-	border-radius: 5%;
-	background-color: gray
-}
+	.showStats {
+		height: 60px;
+		max-width: 900px;
+		width: 80%;
+		position: absolute;
+		left: 8%;
+		top: -100px;
+		background-color: aquamarine;
+	}
 
-.userName {
-	width: 90%;
-	font-size: 45px;
-	color: white;
-	margin-bottom: 10px;
-}
+	.showUsers {
+		height: 60px;
+		position: absolute;
+		left: 10%;
+		bottom: 100px;
+		top: 3%;
+		background-color: aquamarine;
+		border-radius: 1%;
+		max-width: 950px;
+		width: 80%;
+	}
 
-.userAvatar {
-	height: 200px;
-	width: 200px;
-	border-radius: 80%;
-	position: relative;
-	top: 25px
-}
+	.back {
+		height: 200px;
+		width: 300px;
+		background-color: gray
+	}
 
-.mortageStatus {
-	height: 60px;
-	width: 80px;
-	color: white;
-	font-size: 20px;
-}
+	.UserList {
+		-webkit-column-count: 2;
+		-moz-column-count: 2;
+		column-count: 3;
+		max-width: 900px;
+		width: 170%;
+		position: relative;
+		top: 216px;
+	}
 
-.unlikely {
-	height: 20px;
-	width: 20px;
-	position: relative;
-	top: 5px;
-	left: 180px;
-	border-radius: 100%;
-	background-color: orange
-}
 
-.likely {
-	height: 20px;
-	width: 20px;
-	position: relative;
-	top: 5px;
-	left: 180px;
-	border-radius: 100%;
-	background-color: aquamarine
-}
+	.userCard {
+		display: inline-block;
+		max-height: 350px;
+		height: 100%;
+		max-width: 238px;
+		width: 70%;
+		margin-right: 20px;
+		margin-bottom: 30px;
+		padding: 25px;
+		border: 1px solid darkslategray;
+		border-radius: 5%;
+		background-color: gray;
+	}
 
-.verylikely {
-	height: 20px;
-	width: 20px;
-	position: relative;
-	top: 5px;
-	left: 180px;
-	border-radius: 100%;
-	background-color: green
-}
+	.userName {
+		position: relative;
+		left: -16%;
+		top: 0px;
+		width: 90%;
+		font-size: 45px;
+		color: white;
+		margin-bottom: 10px;
+	}
 
-.AccountCardBack {
-	position: relative;
-	right: 4px;
-	font-family: 'Raleway', sans-serif;
-	display: inline-block;
-	height: 350px;
-	width: 200px;
-	border-radius: 5%;
-	background-color: gray;
-	line-height: 30px;
-	color: aquamarine
-}
+	.userAvatar {
+		max-height: 200px;
+		max-width: 200px;
+		height: 80%;
+		width: 100%;
+		border-radius: 80%;
+		position: relative;
+		top: 25px;
+		padding-bottom: 10px;
+	}
 
-.backCardTitles {
-	font-size: 25px;
-	color: white
-}
+	.mortageStatus {
+		height: 60px;
+		width: 80px;
+		color: white;
+		font-size: 20px;
+	}
 
-.chartForCreditScore {
-    color: #fff;
-    width: 350px;
-    max-width: 200%;
-    position: absolute;
-    top: 200px;
-    left: 900px;
-}
-.chartForBalance {
-	color: white;
-	height: 100px;
-	max-width: 100%;
-	width: 350px;
-	max-width: 200%;
-	position: absolute;
-	top: 200px;
-	left: 100px;
+	.unlikely {
+		height: 20px;
+		width: 20px;
+		position: relative;
+		top: -11px;
+		left: 138px;
+		border-radius: 100%;
+		background-color: orange
+	}
+
+	.likely {
+		height: 20px;
+		width: 20px;
+		position: relative;
+		top: -11px;
+		left: 138px;
+		border-radius: 100%;
+		background-color: aquamarine
+	}
+
+	.verylikely {
+		height: 20px;
+		width: 20px;
+		position: relative;
+		top: -11px;
+		left: 138px;
+		border-radius: 100%;
+		background-color: green
+	}
+
+	.AccountCardBack {
+		position: relative;
+		top: -20px;
+		font-family: 'Raleway', sans-serif;
+		display: inline-block;
+		border-radius: 5%;
+		background-color: gray;
+		line-height: 30px;
+		color: aquamarine;
+	}
+
+	.backCardTitles {
+		font-size: 25px;
+		color: white
+	}
+
+	.chartForCreditScore {
+		color: white;
+		width: 350px;
+		max-width: 380px;
+		width: 50%;
+		position: relative;
+		top: 252px;
+		left: 53%;
+	}
+
+	.chartForBalance {
+		color: white;
+		height: 100px;
+		max-width: 380px;
+		width: 50%;
+		height: 8;
+		position: relative;
+		top: -362px;
+		left: 1%;
+		line-height: 13px;
+	}
 }
