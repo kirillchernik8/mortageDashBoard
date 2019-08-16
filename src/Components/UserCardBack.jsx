@@ -3,11 +3,12 @@ import React from "react";
 class UserCardBack extends React.Component {
   constructor(props) {
     super(props);
+
   }
 
   render() {
     return (
-      <div onClick={this.props.flip} className="AccountCardBack">
+      <div className="AccountCardBack">
         <br />
         <span>
           <span className="backCardTitles">

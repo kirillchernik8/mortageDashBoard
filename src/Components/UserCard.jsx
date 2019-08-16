@@ -30,6 +30,7 @@ class UserCard extends React.Component {
   toggleToolTip() {
     this.setState(prevState => ({ tooltipShow: !prevState.tooltipShow }));
   }
+
   // based on the props value set the status to the className
   checkIfCanGetMortage(user) {
     let decision = "";
