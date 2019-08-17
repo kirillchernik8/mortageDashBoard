@@ -4,7 +4,6 @@ import axios from "axios";
 
 import UserCard from "./Components/UserCard.jsx";
 const Stats = dynamic(() => import("./Components/Stats.jsx"));
-import FlipMove from "react-flip-move";
 
 class App extends React.Component {
   constructor(props) {
@@ -49,7 +48,7 @@ class App extends React.Component {
           <button onClick={this.showStats} className="showStats">
             Show Stats
           </button>
-        <FlipMove className="UserList">
+        <div className="UserList">
           {this.state.users ? (
             this.state.users.map(user => {
               return <UserCard user={user} key={user.id} />;
@@ -57,7 +56,7 @@ class App extends React.Component {
           ) : (
             <h1>Loading ... </h1>
           )}
-        </FlipMove>
+        </div>
       </div>
     ) : (
       <Stats stats={this.state.stats} showStats={this.showStats} />
