@@ -6,9 +6,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
   <meta name="description" content="Dashboard mortage">
-  <link defer="defer" rel="stylesheet" type="text/css" crossorigin="crossorigin" href="./index.css" />
-  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="dns-prefetch">
-  <link rel="dns-prefetch" crossorigin="crossorigin" href="https://i.pravatar.cc/">
+
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="preload" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" as="image" crossorigin="crossorigin" href="https://i.pravatar.cc/">
+  <link rel="preload" href="./app.js" as="script">
+
+
+  <noscript id="deferred-styles">
+    <link defer="defer" rel="stylesheet" type="text/css" href="./index.css" lazyload="1" />
+  </noscript>
+
+  <script>
+    var loadDeferredStyles = function () {
+      var addStylesNode = document.getElementById("deferred-styles");
+      var replacement = document.createElement("div");
+      replacement.innerHTML = addStylesNode.textContent;
+      document.body.appendChild(replacement)
+      addStylesNode.parentElement.removeChild(addStylesNode);
+    };
+
+
+    var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+      window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+
+
+    if (raf) {
+      raf(function () {
+        window.setTimeout(loadDeferredStyles, 0);
+      });
+    } else {
+      window.addEventListener('load', loadDeferredStyles);
+    }
+  </script>
+
   <title>Landis</title>
 </head>
 

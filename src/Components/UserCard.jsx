@@ -1,8 +1,7 @@
 import React from "react";
-import LazyLoad from 'react-lazy-load';
 import UserCardBack from "./UserCardBack.jsx";
-import ReactCardFlip from "react-card-flip";
 import { Tooltip } from "reactstrap";
+import LazyLoad from "react-lazyload";
 
 class UserCard extends React.Component {
   constructor(props) {
@@ -46,40 +45,47 @@ class UserCard extends React.Component {
 
   render() {
     return (
-      <div className="userCard" onClick={this.flipCard}>
-        <ReactCardFlip
-          isFlipped={this.state.flippedCard}
-          flipDirection="horizontal"
-          flipSpeedFrontToBack={0.2}
-        >
-          <div key="front">
-            <div
-              className={this.state.mortageStatus.split(" ").join("")}
-              id={this.props.user.name_last}
+      <div
+        className={`flip ${
+          !this.state.flippedCard ? "flip--front" : "flip--back"
+        } `}
+        onClick={this.flipCard}
+      >
+        <div key="front" className="flip__front">
+          <div
+            className={this.state.mortageStatus.split(" ").join("")}
+            id={this.props.user.name_last}
+          >
+            <Tooltip
+              placement="top"
+              isOpen={this.state.tooltipShow}
+              target={this.props.user.name_last}
+              toggle={this.toggleToolTip}
+              className="mortageStatus"
             >
-              <Tooltip
-                placement="top"
-                isOpen={this.state.tooltipShow}
-                target={this.props.user.name_last}
-                toggle={this.toggleToolTip}
-                className="mortageStatus"
-              >
-                It is {this.state.mortageStatus} that they will get a mortage.
-              </Tooltip>
-            </div>
-            <div className="userName">
-              {this.props.user.name_first} <br /> {this.props.user.name_last}
-            </div>
-            <LazyLoad >
-            <img className="userAvatar" alt ={`Image of ${this.props.user.name_first} ${this.props.user.name_last}`}src={this.props.user.picture} />
-            </LazyLoad>
+              It is {this.state.mortageStatus} that they will get a mortage.
+            </Tooltip>
           </div>
+          <div className="userName">
+            {this.props.user.name_first} <br /> {this.props.user.name_last}
+          </div>
+          <LazyLoad once>
+            <img
+              className="userAvatar"
+              alt={`Image of ${this.props.user.name_first} ${
+                this.props.user.name_last
+              }`}
+              src={this.props.user.picture}
+            />
+          </LazyLoad>
+        </div>
+        <div className="flip__back">
           <UserCardBack
             user={this.props.user}
             flip={this.flipCard}
             key="back"
           />
-        </ReactCardFlip>
+        </div>
       </div>
     );
   }

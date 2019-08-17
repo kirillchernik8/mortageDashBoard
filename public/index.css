@@ -1,475 +1,522 @@
 body {
-	background-color: #171e22;
-	font-family: 'Raleway', sans-serif;
+  background-color: #171e22;
+  font-family: "Raleway", sans-serif;
 }
-
 
 @media only screen and (min-width: 961px) {
-	.mainHeader {
-		font-size: 80px;
-		color: aquamarine;
-		position: relative;
-		top: 200px;
-		left: 350px;
-	}
+  .mainHeader {
+    font-size: 80px;
+    color: aquamarine;
+    position: relative;
+    top: 200px;
+    left: 350px;
+  }
 
-	.showStats {
-		height: 60px;
-		width: 200px;
-		position: absolute;
-		left: 450px;
-		top: -100px;
-		background-color: aquamarine;
-	}
+  .showStats {
+	height: 60px;
+    width: 73%;
+    position: absolute;
+    left: 18%;
+    top: 431px;
+    background-color: aquamarine;
+    border: none;
+  }
 
-	.showUsers {
-		height: 60px;
-		max-width: 509px;
-		width: 36%;
-		position: absolute;
-		left: 23%;
-		bottom: 440px;
-		background-color: aquamarine;
-		border-radius: 1%;
-	}
+  .showUsers {
+    height: 40px;
+    max-width: 509px;
+    width: 36%;
+    position: absolute;
+    left: 10%;
+    bottom: 90%;
+    background-color: aquamarine;
+    border: none;
+  }
 
-	.back {
-		height: 200px;
-		width: 300px;
-		background-color: gray
-	}
+  .back {
+    height: 200px;
+    width: 300px;
+    /* background-color: gray */
+  }
 
-	.UserList {
-		-webkit-column-count: 4;
-		-moz-column-count: 4;
-		column-count: 4;
-		max-width: 1500px;
-		width: 90%;
-		position: relative;
-		top: 400px;
-		left: 300px;
-	}
+  .UserList {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1500px;
+    width: 77%;
+    position: relative;
+    top: 400px;
+    left: 300px;
+  }
 
+  .flip {
+    position: relative;
+    display: flex;
+    flex: 1 1 15%;
+    max-height: 350px;
+    height: 90%;
+    width: 147px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    padding: 25px;
+    border: 1px solid darkslategray;
+    border-radius: 5%;
+    background-color: gray;
+  }
 
-	.userCard {
-		display: inline-block;
-		max-height: 350px;
-		height: 90%;
-		width: 150px;
-		margin-right: 20px;
-		margin-bottom: 30px;
-		padding: 25px;
-		border: 1px solid darkslategray;
-		border-radius: 5%;
-		background-color: gray
-	}
+  .flip__back {
+    position: absolute;
+    top: 0px;
+	left: 20%;
+    text-align: center;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    transition: all 300ms;
+    background-color: gray;
+    line-height: 30px;
+    color: aquamarine;
+  }
 
-	.userName {
-		width: 90%;
-		font-size: 45px;
-		color: white;
-		margin-bottom: 10px;
-	}
+  .flip__front {
+    transition: all 300ms;
+    backface-visibility: hidden;
+  }
+  .flip--back .flip__front {
+    transform: rotateY(-180deg);
+  }
 
-	.userAvatar {
-		max-height: 200px;
-		max-width: 200px;
-		height: 80%;
-		width: 100%;
-		border-radius: 80%;
-		position: relative;
-		top: 25px;
-		padding-bottom: 10px;
-	}
+  .flip--back .flip__back {
+    transform: rotateY(0deg);
+  }
 
-	.mortageStatus {
-		height: 60px;
-		width: 80px;
-		color: white;
-		font-size: 20px;
-	}
+  .userName {
+    width: 90%;
+    font-size: 45px;
+    color: white;
+    margin-bottom: 10px;
+  }
 
-	.unlikely {
-		height: 20px;
-		width: 20px;
-		position: relative;
-		top: -11px;
-		left: 138px;
-		border-radius: 100%;
-		background-color: orange
-	}
+  .userAvatar {
+    max-height: 170px;
+    max-width: 170px;
+    height: 80%;
+    width: 100%;
+    border-radius: 80%;
+    position: relative;
+    top: 10px;
+    left: 6px;
+    padding-bottom: 10px;
+  }
 
-	.likely {
-		height: 20px;
-		width: 20px;
-		position: relative;
-		top: -11px;
-		left: 138px;
-		border-radius: 100%;
-		background-color: aquamarine
-	}
+  .mortageStatus {
+    height: 60px;
+    width: 80px;
+    color: white;
+    font-size: 20px;
+  }
 
-	.verylikely {
-		height: 20px;
-		width: 20px;
-		position: relative;
-		top: -11px;
-		left: 138px;
-		border-radius: 100%;
-		background-color: green
-	}
+  .unlikely {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 5%;
+    left: 82%;
+    border-radius: 100%;
+    background-color: orange;
+  }
 
-	.AccountCardBack {
-		position: relative;
-		top: -20px;
-		font-family: 'Raleway', sans-serif;
-		display: inline-block;
-		border-radius: 5%;
-		background-color: gray;
-		line-height: 30px;
-		color: aquamarine;
-	}
+  .likely {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 5%;
+    left: 82%;
+    border-radius: 100%;
+    background-color: aquamarine;
+  }
 
-	.backCardTitles {
-		font-size: 25px;
-		color: white
-	}
+  .verylikely {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 5%;
+    left: 82%;
+    border-radius: 100%;
+    background-color: green;
+  }
 
-	.chartForCreditScore {
-		color: white;
-		width: 350px;
-		max-width: 200%;
-		width: 270px;
-		position: relative;
-		top: 86px;
-		left: 59%;
-	}
+  .backCardTitles {
+    font-size: 25px;
+    color: white;
+  }
 
-	.chartForBalance {
-		color: white;
-		height: 100px;
-		max-width: 100%;
-		width: 270px;
-		max-width: 200%;
-		position: relative;
-		top: -380px;
-		left: 10%;
-	}
+  .chartForCreditScore {
+    color: white;
+    width: 350px;
+    max-width: 200%;
+    width: 270px;
+    position: relative;
+    top: 86px;
+    left: 59%;
+  }
+
+  .chartForBalance {
+    color: white;
+    height: 100px;
+    max-width: 100%;
+    width: 270px;
+    max-width: 200%;
+    position: relative;
+    top: -380px;
+    left: 10%;
+  }
 }
 
-
 @media screen and (max-width: 375px) {
-	.mainHeader {
-		font-size: 80px;
-		color: aquamarine;
-		position: relative;
-		top: 5px;
-		left: 29%;
-	}
+  .mainHeader {
+    font-size: 80px;
+    color: aquamarine;
+    position: relative;
+    top: 5px;
+    left: 29%;
+  }
 
-	.showStats {
-		height: 60px;
-		max-width: 550px;
-		width: 118%;
-		position: absolute;
-		left: 9%;
-		top: -400px;
-		background-color: aquamarine;
-	}
+  .showStats {
+	height: 60px;
+    max-width: 900px;
+    width: 100%;
+    position: absolute;
+    left: 20%;
+    top: 79%;
+    background-color: aquamarine;
+    border: none;
+  }
 
-	.showUsers {
-		height: 42px;
-		max-width: 509px;
-		width: 69%;
-		position: absolute;
-		left: 17%;
-		bottom: 440px;
-		background-color: aquamarine;
-		border-radius: 1%;
-	}
+  .showUsers {
+    height: 46px;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    background-color: aquamarine;
+    border-radius: 1%;
+    max-width: 950px;
+    width: 102%;
+    border: none;
+  }
 
-	.back {
-		height: 200px;
-		width: 300px;
-		background-color: gray
-	}
+  .UserList {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 700px;
+    width: 100%;
+    position: relative;
+    top: 216px;
+    left: 23%;
+  }
 
-	.UserList {
-		-webkit-column-count: 3;
-		-moz-column-count: 3;
-		column-count: 3;
-		max-width: 809px;
-		width: 233%;
-		position: relative;
-		top: 400px;
-		left: 9%;
-	}
+  .userName {
+    width: 90%;
+    font-size: 45px;
+    color: white;
+    margin-bottom: 10px;
+  }
 
+  .userAvatar {
+    max-height: 200px;
+    max-width: 200px;
+    height: 80%;
+    width: 100%;
+    border-radius: 80%;
+    position: relative;
+    top: 25px;
+    padding-bottom: 10px;
+  }
 
-	.userCard {
-		display: inline-block;
-		max-height: 350px;
-		height: 90%;
-		width: 150px;
-		margin-right: 20px;
-		margin-bottom: 30px;
-		padding: 25px;
-		border: 1px solid darkslategray;
-		border-radius: 5%;
-		background-color: gray;
-	}
+  .mortageStatus {
+    height: 60px;
+    width: 80px;
+    color: white;
+    font-size: 20px;
+  }
 
-	.userName {
-		width: 90%;
-		font-size: 45px;
-		color: white;
-		margin-bottom: 10px;
-	}
+  .unlikely {
+    height: 20px;
+    width: 20px;
+    position: relative;
+    top: -11px;
+    left: 165px;
+    border-radius: 100%;
+    background-color: orange;
+  }
 
-	.userAvatar {
-		max-height: 200px;
-		max-width: 200px;
-		height: 80%;
-		width: 100%;
-		border-radius: 80%;
-		position: relative;
-		top: 25px;
-		padding-bottom: 10px;
-	}
+  .likely {
+    height: 20px;
+    width: 20px;
+    position: relative;
+    top: -11px;
+    left: 165px;
+    border-radius: 100%;
+    background-color: aquamarine;
+  }
 
-	.mortageStatus {
-		height: 60px;
-		width: 80px;
-		color: white;
-		font-size: 20px;
-	}
+  .verylikely {
+    height: 20px;
+    width: 20px;
+    position: relative;
+    top: -11px;
+    left: 165px;
+    border-radius: 100%;
+    background-color: green;
+  }
 
-	.unlikely {
-		height: 20px;
-		width: 20px;
-		position: relative;
-		top: -11px;
-		left: 138px;
-		border-radius: 100%;
-		background-color: orange
-	}
+  .flip {
+    position: relative;
+    flex: 1 1 auto;
+    max-height: 350px;
+    height: 90%;
+    width: 150px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    padding: 25px;
+    border: 1px solid darkslategray;
+    border-radius: 5%;
+    background-color: gray;
+  }
 
-	.likely {
-		height: 20px;
-		width: 20px;
-		position: relative;
-		top: -11px;
-		left: 138px;
-		border-radius: 100%;
-		background-color: aquamarine
-	}
+  .flip__back {
+    position: absolute;
+    top: 0px;
+    left: 5px;
+    text-align: center;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    transition: all 300ms;
+    background-color: gray;
+    line-height: 30px;
+    color: aquamarine;
+  }
 
-	.verylikely {
-		height: 20px;
-		width: 20px;
-		position: relative;
-		top: -11px;
-		left: 138px;
-		border-radius: 100%;
-		background-color: green
-	}
+  .flip__front {
+    transition: all 300ms;
+    backface-visibility: hidden;
+  }
+  .flip--back .flip__front {
+    transform: rotateY(-180deg);
+  }
 
-	.AccountCardBack {
-		position: relative;
-		top: -20px;
-		font-family: 'Raleway', sans-serif;
-		display: inline-block;
-		border-radius: 5%;
-		background-color: gray;
-		line-height: 30px;
-		color: aquamarine;
-	}
+  .flip--back .flip__back {
+    transform: rotateY(0deg);
+  }
 
-	.backCardTitles {
-		font-size: 25px;
-		color: white
-	}
+  .backCardTitles {
+    font-size: 25px;
+    color: white;
+  }
 
-	.labels{
-		line-height: 0em;
-	}
-	.chartForCreditScore {
-		color: white;
-		width: 350px;
-		max-width: 270px;
-		width: 50%;
-		position: relative;
-		top: 180px;
-		left: 54%;
-	}
+  .labels {
+    line-height: 0em;
+  }
 
-	.chartForBalance {
-		color: white;
-		height: 95px;
-		max-width: 100%;
-		width: 270px;
-		max-width: 50%;
-		position: relative;
-		top: -257px;
-		left: 0%;
-	}
+  .chartForCreditScore {
+    color: white;
+    width: 350px;
+    max-width: 270px;
+    width: 50%;
+    position: relative;
+    top: 180px;
+    left: 54%;
+  }
+
+  .chartForBalance {
+    color: white;
+    height: 95px;
+    max-width: 100%;
+    width: 270px;
+    max-width: 50%;
+    position: relative;
+    top: -257px;
+    left: 0%;
+  }
 }
 
 @media screen and (min-width: 375px) and (max-width: 960px) {
-	.mainHeader {
-		font-size: 80px;
-		color: aquamarine;
-		position: relative;
-		top: 114px;
-		left: 23%;
-	}
+  .mainHeader {
+    font-size: 80px;
+    color: aquamarine;
+    position: relative;
+    top: 114px;
+    left: 23%;
+  }
 
-	.showStats {
-		height: 60px;
-		max-width: 900px;
-		width: 80%;
-		position: absolute;
-		left: 8%;
-		top: -100px;
-		background-color: aquamarine;
-	}
+  .showStats {
+    height: 60px;
+    max-width: 900px;
+    width: 80%;
+    position: absolute;
+    left: 23%;
+    top: 462px;
+    background-color: aquamarine;
+  }
 
-	.showUsers {
-		height: 60px;
-		position: absolute;
-		left: 10%;
-		bottom: 100px;
-		top: 3%;
-		background-color: aquamarine;
-		border-radius: 1%;
-		max-width: 950px;
-		width: 80%;
-	}
+  .showUsers {
+    height: 30px;
+    position: absolute;
+    bottom: 100px;
+    top: 4%;
+    background-color: aquamarine;
+    border-radius: 1%;
+    max-width: 950px;
+    width: 100%;
+    border: none;
+  }
 
-	.back {
-		height: 200px;
-		width: 300px;
-		background-color: gray
-	}
+  .UserList {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 700px;
+    width: 100%;
+    position: relative;
+    top: 216px;
+    left: 13%;
+  }
 
-	.UserList {
-		-webkit-column-count: 2;
-		-moz-column-count: 2;
-		column-count: 3;
-		max-width: 900px;
-		width: 170%;
-		position: relative;
-		top: 216px;
-	}
+  .userName {
+    position: relative;
+    left: -5%;
+    top: -2%;
+    width: 90%;
+    font-size: 45px;
+    color: white;
+    margin-bottom: 10px;
+  }
 
+  .userAvatar {
+    max-height: 200px;
+    max-width: 200px;
+    height: 80%;
+    width: 100%;
+    border-radius: 80%;
+    position: relative;
+    top: 25px;
+    padding-bottom: 10px;
+  }
 
-	.userCard {
-		display: inline-block;
-		max-height: 350px;
-		height: 100%;
-		max-width: 238px;
-		width: 70%;
-		margin-right: 20px;
-		margin-bottom: 30px;
-		padding: 25px;
-		border: 1px solid darkslategray;
-		border-radius: 5%;
-		background-color: gray;
-	}
+  .mortageStatus {
+    height: 60px;
+    width: 80px;
+    color: white;
+    font-size: 20px;
+  }
 
-	.userName {
-		position: relative;
-		left: -16%;
-		top: 0px;
-		width: 90%;
-		font-size: 45px;
-		color: white;
-		margin-bottom: 10px;
-	}
+  .unlikely {
+    height: 20px;
+    width: 20px;
+    position: relative;
+    top: -11px;
+	left: 93%;
+    border-radius: 100%;
+    background-color: orange;
+  }
 
-	.userAvatar {
-		max-height: 200px;
-		max-width: 200px;
-		height: 80%;
-		width: 100%;
-		border-radius: 80%;
-		position: relative;
-		top: 25px;
-		padding-bottom: 10px;
-	}
+  .likely {
+    height: 20px;
+    width: 20px;
+    position: relative;
+    top: -11px;
+	left: 93%;
+    border-radius: 100%;
+    background-color: aquamarine;
+  }
 
-	.mortageStatus {
-		height: 60px;
-		width: 80px;
-		color: white;
-		font-size: 20px;
-	}
+  .verylikely {
+    height: 20px;
+    width: 20px;
+    position: relative;
+    top: -11px;
+	left: 93%;
+    border-radius: 100%;
+    background-color: green;
+  }
 
-	.unlikely {
-		height: 20px;
-		width: 20px;
-		position: relative;
-		top: -11px;
-		left: 138px;
-		border-radius: 100%;
-		background-color: orange
-	}
+  .AccountCardBack {
+    position: relative;
+    top: -20px;
+    font-family: "Raleway", sans-serif;
+    display: inline-block;
+    border-radius: 5%;
+    background-color: gray;
+    line-height: 30px;
+    color: aquamarine;
+  }
 
-	.likely {
-		height: 20px;
-		width: 20px;
-		position: relative;
-		top: -11px;
-		left: 138px;
-		border-radius: 100%;
-		background-color: aquamarine
-	}
+  .backCardTitles {
+    font-size: 25px;
+    color: white;
+  }
 
-	.verylikely {
-		height: 20px;
-		width: 20px;
-		position: relative;
-		top: -11px;
-		left: 138px;
-		border-radius: 100%;
-		background-color: green
-	}
+  .chartForCreditScore {
+    color: white;
+    width: 350px;
+    max-width: 380px;
+    width: 50%;
+    position: relative;
+    top: 252px;
+    left: 53%;
+  }
 
-	.AccountCardBack {
-		position: relative;
-		top: -20px;
-		font-family: 'Raleway', sans-serif;
-		display: inline-block;
-		border-radius: 5%;
-		background-color: gray;
-		line-height: 30px;
-		color: aquamarine;
-	}
+  .chartForBalance {
+    color: white;
+    height: 100px;
+    max-width: 380px;
+    width: 50%;
+    height: 8;
+    position: relative;
+    top: -362px;
+    left: 1%;
+    line-height: 13px;
+  }
 
-	.backCardTitles {
-		font-size: 25px;
-		color: white
-	}
+  .flip {
+    position: relative;
+    display: flex;
+    flex: 1 1 15%;
+    max-height: 350px;
+    height: 90%;
+    width: 114px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    padding: 25px;
+    border: 1px solid darkslategray;
+    border-radius: 5%;
+    background-color: gray;
+  }
 
-	.chartForCreditScore {
-		color: white;
-		width: 350px;
-		max-width: 380px;
-		width: 50%;
-		position: relative;
-		top: 252px;
-		left: 53%;
-	}
+  .flip__back {
+    position: absolute;
+    top: 0;
+    width: 165px;
+    left: 1%;
+    height: 99%;
+    border-radius: 5%;
+    justify-content: center;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    transition: all 300ms;
+    background-color: gray;
+    line-height: 146%;
+    letter-spacing: -1px;
+    color: aquamarine;
+  }
 
-	.chartForBalance {
-		color: white;
-		height: 100px;
-		max-width: 380px;
-		width: 50%;
-		height: 8;
-		position: relative;
-		top: -362px;
-		left: 1%;
-		line-height: 13px;
-	}
+  .flip__front {
+    transition: all 300ms;
+    backface-visibility: hidden;
+  }
+  .flip--back .flip__front {
+    transform: rotateY(-180deg);
+  }
+
+  .flip--back .flip__back {
+    transform: rotateY(0deg);
+  }
 }

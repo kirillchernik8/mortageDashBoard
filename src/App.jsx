@@ -46,10 +46,10 @@ class App extends React.Component {
       // Flip Move adds animation to the lisr
       <div>
         <h1 className="mainHeader">Mortage Status Dashboard </h1>
-        <FlipMove className="UserList">
           <button onClick={this.showStats} className="showStats">
             Show Stats
           </button>
+        <FlipMove className="UserList">
           {this.state.users ? (
             this.state.users.map(user => {
               return <UserCard user={user} key={user.id} />;

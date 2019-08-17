@@ -8,7 +8,7 @@ class UserCardBack extends React.Component {
 
   render() {
     return (
-      <div className="AccountCardBack">
+      <div>
         <br />
         <span>
           <span className="backCardTitles">
